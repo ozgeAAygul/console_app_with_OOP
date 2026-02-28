@@ -4,6 +4,7 @@ class Library:
 
   def add_book(self, book):
     self.books.append(book)
+    print("Book added!")
 
   def list_books(self):
     if not self.books:
@@ -24,5 +25,6 @@ class Library:
     for book in self.books:
       if book.title.lower() == title.lower():
         self.books.remove(book)
+        print("book removed")
         return
     print(f"- {title} is not in library!") 
