@@ -13,6 +13,17 @@ if __name__ == "__main__": # bu dosya başka dosyanın içine import edilince di
   
   name = input("Enter your user name: ")
   user = User(name)
+  # Eğer kitapların kaydında hangi kullanıcının ödünç aldığı bilgisi varsa,
+  # giriş yapan kullanıcı ile eşleştir ve kullanıcının "borrowed_books" listesini doldur.
+  for book in lib.books:
+    borrowed_name = getattr(book, "borrowed_by_name", None)
+    if borrowed_name == user.name:
+      book.borrowed_by = user
+      book.available = False
+      user.borrowed_books.append(book)
+    # temizle geçici alanı
+    if hasattr(book, "borrowed_by_name"):
+      delattr(book, "borrowed_by_name")
 
   while True:
 

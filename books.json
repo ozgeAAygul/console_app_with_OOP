@@ -1,7 +1,23 @@
 [
     {
-        "title": "A\u015fk\u0131 Memnu",
-        "author": "Halit ziya u\u015fakl\u0131gil",
-        "year": 1900
+        "title": "Aski Memnu",
+        "author": "Halit ziya usakligil",
+        "year": 1900,
+        "available": true,
+        "borrowed_by": null
+    },
+    {
+        "title": "ezilenler",
+        "author": "dostoyevski",
+        "year": 1879,
+        "available": false,
+        "borrowed_by": null
+    },
+    {
+        "title": "masumiyet muzesi",
+        "author": "orhan pamuk",
+        "year": 1990,
+        "available": false,
+        "borrowed_by": "ozge"
     }
 ]
